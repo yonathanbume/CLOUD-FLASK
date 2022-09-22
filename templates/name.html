@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Hello {{ first_name|title }}</h1> 
+
+    <h3>{{ favorites_pizza }}</h3> 
+
+    {% for topping in favorites_pizza %}
+        {% if topping==41 %}
+            {{ topping + 100 }}<br/> 
+        {% else %}
+            {{ topping|upper }} <br/> 
+        {% endif %}
+    {% endfor %} 
+
+    <p>{{ favorites_pizza.3|reverse|upper }}</p>
+
+    
+{% endblock %}
+
